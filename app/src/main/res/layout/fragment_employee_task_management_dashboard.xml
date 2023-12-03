@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="employeeTaskManagementDashboardVM" type="com.taskmanagement.app.modules.employeetaskmanagementdashboard.data.viewmodel.EmployeeTaskManagementDashboardVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnheaderparadef"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_28pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15pxh"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearHeader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHeaderparadef"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.89"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtHeaderparadef}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_saturday_feb_2"/>
+                <ImageView android:id="@+id/imageVector"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_188pxh"
+                    android:layout_width="@dimen/_17pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_blue_700"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_blue_700"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="end" android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_28pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearEmployeeTaskM"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSubheaderpara"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_1pxh"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtSubheaderpara}"
+                    style="@style/txtPoppinsbold24" tools:text="@string/lbl_welcome_janet"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSubheaderparaOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_1pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtSubheaderparaOne}"
+                    style="@style/txtPoppinsregular16" tools:text="@string/msg_have_a_nice_day"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCategoryparab"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_1pxh"
+                    android:layout_marginTop="@dimen/_29pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtCategoryparab}"
+                    style="@style/txtPoppinssemibold20" tools:text="@string/msg_my_priority_tas"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="end" android:id="@+id/recyclerCard"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7pxv"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_12pxh}" tools:itemCount="3" tools:listitem="@layout/row_card"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCategoryparabOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_1pxh"
+                    android:layout_marginTop="@dimen/_32pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtCategoryparabOne}"
+                    style="@style/txtPoppinssemibold20" tools:text="@string/lbl_daily_task"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearCard"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_1pxh"
+                    android:layout_marginTop="@dimen/_7pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+                    <LinearLayout android:id="@+id/linearCardmenuprima"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_1">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtParaprimaryceThree"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_13pxv"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginTop="@dimen/_11pxv"
+                            android:layout_weight="0.82"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtParaprimaryceThree}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_wash_utensils"/>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearButtonactive"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginStart="@dimen/_184pxh"
+                            android:layout_marginTop="@dimen/_12pxv"
+                            android:layout_weight="0.18"
+                            android:layout_width="0dp"
+                            android:orientation="vertical" style="@style/groupStylewhite_2">
+                            <View
+                                android:background="@drawable/rectangle_bg_blue_700_radius_8"
+                                android:id="@+id/viewEllipse222"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_marginHorizontal="@dimen/_3pxh"
+                                android:layout_marginVertical="@dimen/_3pxv" android:layout_width="@dimen/_16pxh"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearCardmenuprima1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_1">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtParaprimaryceFour"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_13pxv"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginTop="@dimen/_11pxv"
+                            android:layout_weight="0.86"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtParaprimaryceFour}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/msg_vacuum_the_hous"/>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearButtonactive1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginStart="@dimen/_148pxh"
+                            android:layout_marginTop="@dimen/_12pxv"
+                            android:layout_weight="0.14"
+                            android:layout_width="0dp"
+                            android:orientation="vertical" style="@style/groupStylewhite_2">
+                            <View
+                                android:background="@drawable/rectangle_bg_blue_700_radius_8"
+                                android:id="@+id/viewEllipse222One"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_marginHorizontal="@dimen/_3pxh"
+                                android:layout_marginVertical="@dimen/_3pxv" android:layout_width="@dimen/_16pxh"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearCardmenudefau"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_1">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLanguage"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:layout_marginStart="@dimen/_18pxh"
+                            android:layout_marginTop="@dimen/_12pxv"
+                            android:layout_weight="0.83"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtLanguage}"
+                            style="@style/txtPoppinsmedium14_1" tools:text="@string/lbl_take_trash_out"/>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearColumnellipse222Two"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginStart="@dimen/_173pxh"
+                            android:layout_marginTop="@dimen/_12pxv"
+                            android:layout_weight="0.17"
+                            android:layout_width="0dp"
+                            android:orientation="vertical" style="@style/groupStylewhite_2">
+                            <View
+                                android:background="@drawable/rectangle_bg_white_a700_radius_8"
+                                android:id="@+id/viewEllipse222Two"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_marginHorizontal="@dimen/_3pxh"
+                                android:layout_marginVertical="@dimen/_3pxv" android:layout_width="@dimen/_16pxh"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearCardmenudefau1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_1">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtParadefaultce"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginTop="@dimen/_14pxv"
+                            android:layout_weight="0.85"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtParadefaultce}"
+                            style="@style/txtPoppinsmedium14_1" tools:text="@string/msg_prepare_the_bed"/>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearColumnellipse222Three"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginStart="@dimen/_163pxh"
+                            android:layout_marginTop="@dimen/_12pxv"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:orientation="vertical" style="@style/groupStylewhite_2">
+                            <View
+                                android:background="@drawable/rectangle_bg_white_a700_radius_8"
+                                android:id="@+id/viewEllipse222Three"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_marginHorizontal="@dimen/_3pxh"
+                                android:layout_marginVertical="@dimen/_3pxv" android:layout_width="@dimen/_16pxh"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearCardmenudefau2"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_1">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtParadefaultceOne"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginTop="@dimen/_14pxv"
+                            android:layout_weight="0.87"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtParadefaultceOne}"
+                            style="@style/txtPoppinsmedium14_1" tools:text="@string/msg_assignment_revi"/>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearColumnellipse222Four"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginStart="@dimen/_136pxh"
+                            android:layout_marginTop="@dimen/_12pxv"
+                            android:layout_weight="0.13"
+                            android:layout_width="0dp"
+                            android:orientation="vertical" style="@style/groupStylewhite_2">
+                            <View
+                                android:background="@drawable/rectangle_bg_white_a700_radius_8"
+                                android:id="@+id/viewEllipse222Four"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_marginHorizontal="@dimen/_3pxh"
+                                android:layout_marginVertical="@dimen/_3pxv" android:layout_width="@dimen/_16pxh"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearCardmenudefau3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_1">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtParadefaultceTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_13pxv"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginTop="@dimen/_11pxv"
+                            android:layout_weight="0.89"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtParadefaultceTwo}"
+                            style="@style/txtPoppinsmedium14_1" tools:text="@string/msg_buying_mother_m"/>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearColumnellipse222Five"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginStart="@dimen/_113pxh"
+                            android:layout_marginTop="@dimen/_12pxv"
+                            android:layout_weight="0.11"
+                            android:layout_width="0dp"
+                            android:orientation="vertical" style="@style/groupStylewhite_2">
+                            <View
+                                android:background="@drawable/rectangle_bg_white_a700_radius_8"
+                                android:id="@+id/viewEllipse222Five"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_marginHorizontal="@dimen/_3pxh"
+                                android:layout_marginVertical="@dimen/_3pxv" android:layout_width="@dimen/_16pxh"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearCardmenudefau4"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_1">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtParadefaultceThree"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_13pxv"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginTop="@dimen/_13pxv"
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtParadefaultceThree}"
+                            style="@style/txtPoppinsmedium14_1" tools:text="@string/lbl_check_email"/>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearColumnellipse222Six"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginStart="@dimen/_195pxh"
+                            android:layout_marginTop="@dimen/_12pxv"
+                            android:layout_weight="0.2"
+                            android:layout_width="0dp"
+                            android:orientation="vertical" style="@style/groupStylewhite_2">
+                            <View
+                                android:background="@drawable/rectangle_bg_white_a700_radius_8"
+                                android:id="@+id/viewEllipse222Six"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_marginHorizontal="@dimen/_3pxh"
+                                android:layout_marginVertical="@dimen/_3pxv" android:layout_width="@dimen/_16pxh"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearCardmenudefau5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_1">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtParadefaultceFour"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_13pxv"
+                            android:layout_marginStart="@dimen/_15pxh"
+                            android:layout_marginTop="@dimen/_13pxv"
+                            android:layout_weight="0.85"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{employeeTaskManagementDashboardVM.employeeTaskManagementDashboardModel.txtParadefaultceFour}"
+                            style="@style/txtPoppinsmedium14_1" tools:text="@string/msg_dinner_with_lov"/>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearColumnellipse222Seven"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginStart="@dimen/_163pxh"
+                            android:layout_marginTop="@dimen/_12pxv"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:orientation="vertical" style="@style/groupStylewhite_2">
+                            <View
+                                android:background="@drawable/rectangle_bg_white_a700_radius_8"
+                                android:id="@+id/viewEllipse222Seven"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_marginHorizontal="@dimen/_3pxh"
+                                android:layout_marginVertical="@dimen/_3pxv" android:layout_width="@dimen/_16pxh"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

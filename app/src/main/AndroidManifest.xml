@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.taskmanagement.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.taskmanagement.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.taskmanagement.app.modules.employertaskmanagementdashboard.ui.EmployerTaskManagementDashboardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.registrationpage.ui.RegistrationpageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.employeetaskmanagementdashboardcontainer.ui.EmployeeTaskManagementDashboardcontainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.viewemployeeprofiletaskmangement.ui.ViewEmployeeProfileTaskMangementActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.employeerprofile.ui.EmployeerProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.viewemployeestaskmanagement.ui.ViewEmployeesTaskManagementActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.employerlogin.ui.EmployerLoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.employereditdailytasktaskmanagement.ui.EmployerEditDailyTaskTaskManagementActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.employeemyprofilepage.ui.EmployeeMyProfilePageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.employeredittasktodolist.ui.EmployerEditTaskTodolistActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.taskmanagement.app.modules.employeelogin.ui.EmployeeLoginActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.taskmanagement.app.modules.employeesettings.ui.EmployeesettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.employe.ui.EmployeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.editemployeeprofiletaskmanagement.ui.EditEmployeeProfiletaskManagementActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.employeradddailytasktaskmanagement.ui.EmployerAddDailyTasktaskManagementActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.employeermyprofilepage.ui.EmployeerMyProfilePageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.employertaskspagetaskmanagement.ui.EmployerTasksPagetaskManagementActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.taskmanagement.app.modules.splash.ui.SplashActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

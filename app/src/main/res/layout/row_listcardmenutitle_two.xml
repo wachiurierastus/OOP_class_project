@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listcardmenutitleTwoRowModel" type="com.taskmanagement.app.modules.employertaskspagetaskmanagement.data.model.ListcardmenutitleTwoRowModel"/>
+    </data>
+    <LinearLayout android:gravity="end"
+        android:id="@+id/linearColumncardmenutitleTwo"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_1">
+        <LinearLayout android:id="@+id/linearRowgroup280Two"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15pxh"
+            android:layout_marginStart="@dimen/_24pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:id="@+id/linearRowcardmenutitleTwo"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.84" android:layout_width="0dp" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageCardmenutitleTwo"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_cardmenutitle_blue_700_16x16"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_cardmenutitle_blue_700_16x16"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLanguageTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_9pxh"
+                    android:layout_weight="0.82"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listcardmenutitleTwoRowModel.txtLanguageTwo}"
+                    style="@style/txtPoppinssemibold14" tools:text="@string/lbl_cook_food"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageGroupTwo"
+                android:layout_height="@dimen/_4pxh"
+                android:layout_marginBottom="@dimen/_6pxv"
+                android:layout_marginStart="@dimen/_176pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_group280"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_group280"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRowline210"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <View android:background="@color/blue_703"
+                android:id="@+id/lineLine210Two"
+                android:layout_height="@dimen/_80pxv"
+                android:layout_marginBottom="@dimen/_17pxv"
+                android:layout_weight="0.01" android:layout_width="0dp"/>
+            <TextView android:id="@+id/txtDescriptionTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_22pxh"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:layout_weight="0.99" android:layout_width="0dp"
+                android:text="@{listcardmenutitleTwoRowModel.txtDescriptionTwo}"
+                style="@style/txtPoppinsregular10_2" tools:text="@string/msg_food_creation_i"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtFebMarTwo"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:layout_marginEnd="@dimen/_15pxh"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{listcardmenutitleTwoRowModel.txtFebMarTwo}"
+            style="@style/txtPoppinsregular10_5" tools:text="@string/msg_feb_21_mar"/>
+    </LinearLayout>
+</layout>
