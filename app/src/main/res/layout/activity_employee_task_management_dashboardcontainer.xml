@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="employeeTaskManagementDashboardcontainerVM" type="com.taskmanagement.app.modules.employeetaskmanagementdashboardcontainer.data.viewmodel.EmployeeTaskManagementDashboardcontainerVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnheaderparadef"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_28pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <FrameLayout android:id="@+id/fragmentContainer"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+        <FrameLayout android:id="@+id/frameBottombar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStylewhite_5">
+            <LinearLayout android:id="@+id/linearRowvectorOne"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_26pxv"
+                android:layout_marginTop="@dimen/_26pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageVectorOne"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_marginStart="@dimen/_53pxh"
+                    android:layout_width="@dimen/_25pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_blue_700_26x25"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_blue_700_26x25"/>
+                <ImageView android:id="@+id/imageVectorTwo"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_marginStart="@dimen/_96pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_blue_100"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_blue_100"/>
+                <ImageView android:id="@+id/imageVectorThree"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_marginEnd="@dimen/_55pxh"
+                    android:layout_marginStart="@dimen/_98pxh"
+                    android:layout_width="@dimen/_21pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_blue_100_26x21"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_blue_100_26x21"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

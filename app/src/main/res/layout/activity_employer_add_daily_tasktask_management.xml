@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="employerAddDailyTasktaskManagementVM" type="com.taskmanagement.app.modules.employeradddailytasktaskmanagement.data.viewmodel.EmployerAddDailyTasktaskManagementVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_25pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleblue_700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_white_a700_radius_10"
+                    android:id="@+id/btnArrowleft"
+                    android:layout_height="@dimen/_36pxh"
+                    android:layout_width="@dimen/_36pxh"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_arrowleft" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtParaprimaryce"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5pxv"
+                    android:layout_marginStart="@dimen/_93pxh"
+                    android:layout_marginTop="@dimen/_6pxv"
+                    android:layout_weight="0.68"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{employerAddDailyTasktaskManagementVM.employerAddDailyTasktaskManagementModel.txtParaprimaryce}"
+                    style="@style/txtPoppinssemibold16" tools:text="@string/lbl_add_task"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true" android:gravity="start"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_39pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnparaprimaryceOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylewhite_4">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowparaprimaryceOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_21pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:layout_marginTop="@dimen/_37pxv"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtParaprimaryceOne"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{employerAddDailyTasktaskManagementVM.employerAddDailyTasktaskManagementModel.txtParaprimaryceOne}"
+                        style="@style/txtPoppinsmedium14" tools:text="@string/lbl_start"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtParaprimaryceTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_140pxh"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{employerAddDailyTasktaskManagementVM.employerAddDailyTasktaskManagementModel.txtParaprimaryceTwo}"
+                        style="@style/txtPoppinsmedium14" tools:text="@string/lbl_ends"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearRowinputprimaryi"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_17pxh"
+                    android:layout_marginStart="@dimen/_17pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <EditText
+                        android:background="@drawable/rectangle_bg_blue_51_border_blue_700_0f_radius_10"
+                        android:drawablePadding="@dimen/_13pxh"
+                        android:drawableStart="@drawable/img_vector_blue_100_17x16"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_sep_a6_2023"
+                        android:id="@+id/etInputprimaryi"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_11pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:singleLine="true"
+                        android:text="@={employerAddDailyTasktaskManagementVM.employerAddDailyTasktaskManagementModel.etInputprimaryiValue}"
+                        android:textColorHint="@color/gray_802"
+                        style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_white_a700_border_blue_700_0f_radius_10"
+                        android:drawablePadding="@dimen/_16pxh"
+                        android:drawableStart="@drawable/img_vector_blue_700_18x16"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_sep_21_2023"
+                        android:id="@+id/etInputprimaryd"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15pxh"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_11pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:singleLine="true"
+                        android:text="@={employerAddDailyTasktaskManagementVM.employerAddDailyTasktaskManagementModel.etInputprimarydValue}"
+                        android:textColorHint="@color/gray_802"
+                        style="@style/etSolidRoundedOutline_1" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtParaprimaryceThree"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_21pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:layout_marginTop="@dimen/_28pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{employerAddDailyTasktaskManagementVM.employerAddDailyTasktaskManagementModel.txtParaprimaryceThree}"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/lbl_title"/>
+                <FrameLayout android:id="@+id/frameInputprimaryd"
+                    android:layout_height="@dimen/_18pxv"
+                    android:layout_marginEnd="@dimen/_17pxh"
+                    android:layout_marginStart="@dimen/_17pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_width="@dimen/_83pxh" style="@style/groupStylewhite_7">
+                    <View
+                        android:background="@drawable/rectangle_bg_white_a700_border_blue_700_0f_radius_9"
+                        android:id="@+id/viewCreatefromfra"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_18pxv"
+                        android:layout_marginStart="@dimen/_3pxh" android:layout_width="@dimen/_80pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="top|start"
+                        android:id="@+id/txtPhillipWilliam"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{employerAddDailyTasktaskManagementVM.employerAddDailyTasktaskManagementModel.txtPhillipWilliam}"
+                        style="@style/txtPoppinsregular12_3" tools:text="@string/lbl_wash_clothes"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLanguage"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_45pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{employerAddDailyTasktaskManagementVM.employerAddDailyTasktaskManagementModel.txtLanguage}"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/lbl_assign_employee"/>
+                <FrameLayout
+                    android:id="@+id/frameStackparaprimaryceFour"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_264pxv"
+                    android:layout_marginEnd="@dimen/_17pxh"
+                    android:layout_marginStart="@dimen/_17pxh"
+                    android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_335pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtParaprimaryceFour"
+                        android:layout_gravity="top|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_63pxv"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_63pxv"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{employerAddDailyTasktaskManagementVM.employerAddDailyTasktaskManagementModel.txtParaprimaryceFour}"
+                        style="@style/txtPoppinsmedium14" tools:text="@string/lbl_description"/>
+                    <LinearLayout android:id="@+id/linearInputprimaryd"
+                        android:layout_gravity="bottom|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylewhite_1">
+                        <TextView android:gravity="start"
+                            android:id="@+id/txtDescription"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/_69pxv"
+                            android:layout_marginEnd="@dimen/_14pxh"
+                            android:layout_marginStart="@dimen/_14pxh"
+                            android:layout_marginTop="@dimen/_15pxv"
+                            android:layout_width="match_parent"
+                            android:text="@{employerAddDailyTasktaskManagementVM.employerAddDailyTasktaskManagementModel.txtDescription}"
+                            style="@style/txtPoppinsregular12_3" tools:text="@string/msg_involves_washin"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearDropdownBox"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_3pxv"
+                        android:layout_marginEnd="@dimen/_1pxh"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <Spinner
+                            android:background="@drawable/layer_list_bg_blue_706_border_gray_401_radius_8"
+                            android:id="@+id/spinnerHeader"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_white_a700_radius_8"
+                            android:id="@+id/viewItemsList"
+                            android:layout_height="@dimen/_218pxv"
+                            android:layout_marginTop="@dimen/_1pxv" android:layout_width="@dimen/_334pxh"/>
+                    </LinearLayout>
+                </FrameLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnCreateTask"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20pxv"
+                    android:layout_marginEnd="@dimen/_17pxh"
+                    android:layout_marginStart="@dimen/_17pxh"
+                    android:layout_marginTop="@dimen/_30pxv"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_create_task"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_create_task"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
